@@ -11,6 +11,7 @@
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
     };
 
     kscan0: kscan_0 {
