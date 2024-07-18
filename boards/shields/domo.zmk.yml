@@ -1,0 +1,12 @@
+file_format: "1"
+id: domo
+name: Domo
+type: shield
+url: https://github.com/MayTD/DoMo-Macro-Pad
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
