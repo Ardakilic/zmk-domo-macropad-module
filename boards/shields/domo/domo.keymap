@@ -16,6 +16,10 @@
     status = "okay";
 };
 
+&soft_off {
+    hold-time-ms = <500>; // Only turn off it the key is held for 500 ms or longer.
+};
+
 
 / {
     combos {
@@ -39,6 +43,12 @@
             timeout-ms = <TIMEOUT>;
             key-positions = <1 4>;
             bindings = <&bt BT_NXT>;
+        };
+
+        combo_soft_off {
+            timeout-ms = <TIMEOUT>; // wait for the second key to be pressed for combo
+            key-positions = <0 1>; // 0th key and 1st key of the keymap for the combo.
+            bindings = <&soft_off>; //The soft off behavior is used to force the keyboard into an off state. The keyboard can be turned back on again either with using the reset button found on the device.
         };
     };
 
